@@ -2,7 +2,6 @@ import string
 import random
 
 
-
 def get_password(count_digits: int
                  , count_ascii_letters: int
                  , case_sensitive=False) -> str:
