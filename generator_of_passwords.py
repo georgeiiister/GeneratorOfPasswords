@@ -78,25 +78,26 @@ def main():
     frm.grid(column=0, row=0)
 
     count_digits_label = tk.Label(frm, text='count_digits:')
-    count_digits_label.grid(column=0, row=0)
+    count_digits_label.grid(column=0, row=0, sticky=tk.W)
 
-    count_digits_entry = tk.Entry()
+    count_digits_entry = tk.Entry(frm)
     count_digits_entry.grid(column=1, row=0)
 
     count_digits_label = tk.Label(frm, text='count_ascii_letters:')
     count_digits_label.grid(column=0, row=2)
 
-    count_ascii_letters_entry = tk.Entry()
+    count_ascii_letters_entry = tk.Entry(frm)
     count_ascii_letters_entry.grid(column=1, row=2)
 
     d = count_digits_entry
     a = count_ascii_letters_entry
 
-    count_digits_button = tk.Button(text='generate',
+    count_digits_button = tk.Button(frm,
+                                    text='generate',
                                     command=lambda: get_password_by_command(d.get(), a.get(),'')
                                     )
 
-    count_digits_button.grid(column=1, row=3)
+    count_digits_button.grid(column=3, row=0)
 
     root.mainloop()
 
